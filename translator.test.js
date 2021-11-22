@@ -8,19 +8,19 @@ if("'a' is input, return '.-'", () => {
 });
 
 // If 'z' is input, Expect '--..'
-if("'z' is input, return '.-'", () => {
+if("'z' is input, return '--..'", () => {
     const result = translator("z");
     expect(result).toBe("--..");
 });
 
 // If 'hello' is input, Expect '.... . .-.. .-.. ---'
-if("'hello' is input, return '.-'", () => {
+if("'hello' is input, return '.... . .-.. .-.. ---'", () => {
     const result = translator("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
 });
 
-// If '#^&' is input, Expect 'unavailable'
-if("'#^&' is input, return 'unavailable'", () => {
-    const result = translator("#^&");
-    expect(result).toBe("unavailable");
-});
+// // If '#^&' is input, Expect 'unavailable'
+// if("'#^&' is input, return 'unavailable'", () => {
+//     const result = translator("#^&");
+//     expect(result).toBe("unavailable");
+// });
