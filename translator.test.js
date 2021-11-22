@@ -1,26 +1,26 @@
 import {expect, it} from '@jest/globals';
-import {} from './translator.js';
+import {translateFromEng} from './translator.js';
 
 // If 'a' is input, Expect '.-'
-if("'a' is input, return '.-'", () => {
-    const result = translator("a");
+it("'a' is input, return '.-'", () => {
+    const result = translateFromEng("a");
     expect(result).toBe(".-");
 });
 
 // If 'z' is input, Expect '--..'
-if("'z' is input, return '--..'", () => {
-    const result = translator("z");
+it("'z' is input, return '--..'", () => {
+    const result = translateFromEng("z");
     expect(result).toBe("--..");
 });
 
 // If 'hello' is input, Expect '.... . .-.. .-.. ---'
-if("'hello' is input, return '.... . .-.. .-.. ---'", () => {
-    const result = translator("hello");
+it("'hello' is input, return '.... . .-.. .-.. ---'", () => {
+    const result = translateFromEng("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
 });
 
 // // If '#^&' is input, Expect 'unavailable'
-// if("'#^&' is input, return 'unavailable'", () => {
-//     const result = translator("#^&");
-//     expect(result).toBe("unavailable");
-// });
+it("'#^&' is input, return 'unavailable'", () => {
+    const result = translator("#^&");
+    expect(result).toBe("unavailable");
+});
