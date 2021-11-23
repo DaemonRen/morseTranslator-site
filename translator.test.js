@@ -7,6 +7,12 @@ it("'a' is input, return '.-'", () => {
     expect(result).toBe(".-");
 });
 
+// If 'A' is input, Expect '.-'
+it("'A' is input, return '.-'", () => {
+    const result = translateFromEng("A");
+    expect(result).toBe(".-");
+});
+
 // If 'z' is input, Expect '--..'
 it("'z' is input, return '--..'", () => {
     const result = translateFromEng("z");
@@ -19,8 +25,15 @@ it("'hello' is input, return '.... . .-.. .-.. ---'", () => {
     expect(result).toBe(".... . .-.. .-.. ---");
 });
 
-// // If '#^&' is input, Expect 'unavailable'
-it("'#^&' is input, return 'unavailable'", () => {
-    const result = translator("#^&");
-    expect(result).toBe("unavailable");
+// If 'hello world' is input, Expect '.... . .-.. .-.. ---   .-- --- .-. .-.. -..'
+it("'hello world' is input, return '.... . .-.. .-.. ---   .-- --- .-. .-.. -..'", () => {
+    const result = translateFromEng("hello world");
+    expect(result).toBe(".... . .-.. .-.. ---   .-- --- .-. .-.. -..");
 });
+
+
+// If '#^&' is input, Expect 'unavailable'
+// it("'#^&' is input, return 'unavailable'", () => {
+//     const result = translator("#^&");
+//     expect(result).toBe("unavailable");
+// });
