@@ -11,7 +11,7 @@ const morseOutput = document.getElementById("morse-Translation");
 const englishToMorse = () => {
     const input = englishInput.englishCode.value;
     englishInput.englishCode.value = "";
-    const morseConfig = translateFromEng(input).split("   ").join("   ");
+    const morseConfig = translateFromEng(input).split("   ").join(" ");
     morseOutput.innerHTML = morseConfig
 };
 
